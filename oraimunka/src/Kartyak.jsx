@@ -10,7 +10,7 @@ function Kartyak(){
         <>
             <input placeholder="név"  value={nev} onChange={nevMegjelenites}/>
             
-            <p>Kedves: {nev}</p>
+            <p>Kedves: <strong> {nev}</strong></p>
         </>
     )
 }
