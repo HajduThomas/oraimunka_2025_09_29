@@ -5,6 +5,7 @@ function App() {
     <>
       <h1>Random szám játék</h1>
       <Jatek/>
+      <h1>Kártya adatok</h1>
       <Kartyak/>
     </>
   )
