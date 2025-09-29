@@ -11,8 +11,13 @@ function Jatek()
 
     return(
         <>
-            {szamok.map((e,i) => <button key={i} onClick={()=>setTipp(e)}>{ e }</button>)}
-            <p>Tipped: {tipp} {szam == tipp ? "Talált!" : "Nem talált!"}</p>
+            {szamok.map((e,i) => <button disabled= {tipp == szam} key={i} onClick={()=>setTipp(e)}>{ e }</button>)}
+            <p>Tipped: {tipp}
+            {
+                tipp !== 0 ?
+                (szam == tipp ? " Talált " : " Nem talált ") :
+                " Tippelj "
+            }</p>
         </>
     )
 }
