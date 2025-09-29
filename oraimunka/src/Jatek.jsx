@@ -1,17 +1,17 @@
 import { useState } from "react"
 function Jatek()
 {
-    const[db, setDb] = useState(1);
-    const novel = () => setDb(db+1);
+    const max = 10;
+    const szamok = [];
+    for(let i=1; i<=max; i++)
+        szamok.push(i);
+
+    const[tipp, setTipp] = useState(0);
+
     return(
         <>
-            <button onClick={novel}>1</button>
-            <button onClick={novel}>2</button>
-            <button onClick={novel}>3</button>
-            <button onClick={novel}>4</button>
-            <button onClick={novel}>5</button>
-
-            <p>Szamok: {db}</p>
+            {szamok.map((e,i) => <button key={i} onClick={()=>setTipp(e)}>{ e }</button>)}
+            <p>Tipped: {tipp}</p>
         </>
     )
 }
