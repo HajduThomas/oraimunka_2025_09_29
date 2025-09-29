@@ -1,6 +1,5 @@
 import Jatek from "./Jatek"
 import Kartyak from "./Kartyak"
-import Card from "./Card"
 function App() {
   return (
     <>
@@ -8,7 +7,6 @@ function App() {
       <Jatek/>
       <h1>Kártya adatok</h1>
       <Kartyak/>
-      <Card/>
     </>
   )
 }
