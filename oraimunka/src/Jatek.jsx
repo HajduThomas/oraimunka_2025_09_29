@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useEffect } from "react";
 function Jatek()
 {
     const max = 10;
@@ -8,7 +9,12 @@ function Jatek()
         szamok.push(i);
 
     const[tipp, setTipp] = useState(0);
+    const[db, setDb] = useState(0);
 
+    useEffect(
+        () => setDb(db+1), 
+        [tipp]
+    )
     return(
         <>
             {szamok.map((e,i) => <button disabled= {tipp == szam} key={i} onClick={()=>setTipp(e)}>{ e }</button>)}
@@ -18,6 +24,7 @@ function Jatek()
                 (szam == tipp ? " Talált " : " Nem talált ") :
                 " Tippelj "
             }</p>
+            <p>Tippek száma: {db}</p>
         </>
     )
 }
