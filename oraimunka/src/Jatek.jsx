@@ -12,7 +12,10 @@ function Jatek()
     const[db, setDb] = useState(0);
 
     useEffect(
-        () => setDb(db+1), 
+        () =>{
+            if(tipp != 0)
+                setDb(db+1)
+        },
         [tipp]
     )
     return(
